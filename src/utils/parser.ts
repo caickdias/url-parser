@@ -19,7 +19,7 @@ const splitURL = (url: string) => {
         "scheme": SCHEME,
         "hostname": HOSTNAME,
         "subdomain": SUBDOMAIN,
-        "domain": `${DOMAIN}.${TLD}`,
+        "domain": `${DOMAIN ? `${DOMAIN}'.'${TLD}` : ''}`,
         "tld": TLD,
         "path": PATH,
         "query": QUERY,

@@ -2,11 +2,7 @@ import React, { useContext } from 'react'
 
 import PreferencesContext from '../context/Context';
 
-type Props = {
-    textMode: string;
-}
-
-const CheckBoxTopArea = ({ textMode }: Props) => {
+const CheckBoxTopArea = () => {
 
   const { preferences, setPreferences } = useContext<any>(PreferencesContext); 
     

@@ -7,7 +7,6 @@ import ShowOptions from '../ShowOptions';
 
 const Sidebar = () => {
 
-  const [outputMode, setOutputMode] = useState('object');
   const { preferences, setPreferences } = useContext<any>(PreferencesContext);  
     
   const onToggleOption = (option: string) => {    
@@ -23,7 +22,7 @@ const Sidebar = () => {
         <h1 className="text-2xl">Preferences</h1>
         <LineDivider />        
 
-        <CheckBoxTopArea textMode={outputMode} />        
+        <CheckBoxTopArea />        
         
         <h1 className="text-2xl">Show options</h1>
         <LineDivider />

@@ -2,6 +2,8 @@ import React, { useState, ReactNode } from 'react';
 import PreferencesContext from './Context';
 import { Preferences } from '../types/index';
 
+import { setPreferencesToLocalStorage } from '../services/localStorage';
+
 type Props = {
     children: ReactNode;
 }
@@ -24,7 +26,12 @@ const initialState = {
 
 export const PreferencesProvider = ({ children }: Props) => {
 
-    const [preferences, setPreferences] = useState<Preferences>(initialState);
+    const [preferences, changePreferences] = useState<Preferences>(initialState);
+
+    const setPreferences = (preferences: Preferences) => {
+        changePreferences(preferences);
+        setPreferencesToLocalStorage(preferences);
+    }
 
     return(
         <PreferencesContext.Provider value={{ preferences, setPreferences }}>
