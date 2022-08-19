@@ -1,6 +1,21 @@
+<img src="https://github.com/caickdias/url-parser/blob/master/examples/app.png" width="60%" height="60%"/>
+
+## You can see this project running live [here](https://caickdias.github.io/url-parser/).
+
 # URL parser
 
-Just paste your URL and it will parse its information
+Paste your URL and the app will parse your URL to an object or text with options to hide or show some information.
+
+# Patch notes
+
+```
+v0.1.0
+- Paste your URL and it will parse it
+- Select between object and text
+- Copy to clipboard
+- Preferences to show/hide information
+- Preferences is stored in local storage
+```
 
 # Getting started
 
