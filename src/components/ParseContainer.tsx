@@ -9,7 +9,7 @@ type Props = {
 
 const ParseContainer = ({ url }: Props) => {
   
-  const parsed: any = splitURL(url || 'https://www.asdf.com/query?a=b&c=123&d=1');
+  const parsed: any = splitURL('localhost:3000/');
 
   return (
     <div className='w-1/3 h-48 relative'>
