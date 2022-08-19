@@ -9,7 +9,7 @@ type Props = {
 const CopyToClipboard = ({text}: Props ) => {
   return (
     <button 
-        className='absolute top-3 right-3 opacity-70 hover:opacity-[100]'  
+        className='absolute top-3 right-5 opacity-70 hover:opacity-[100]'  
         onClick={() => {navigator.clipboard.writeText(text)}}
       >
         <AiOutlineCopy size={18} color="white" />
