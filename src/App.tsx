@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
 
+import { Main, Sidebar } from '../src/components';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+    <div className="flex flex-1 justify-center items-center h-screen text-white bg-[#1e272e]">
+      
+        <Main />
 
-      </header>
+        <Sidebar />
+      
     </div>
   );
 }
