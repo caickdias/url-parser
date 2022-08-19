@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useContext } from 'react'
 import CopyToClipboard from './CopyToClipboard';
 
 import { generateParsedStringUrl, splitURL } from '../utils/parser';
+import PreferencesContext from '../context/Context';
 
 import { Preferences } from '../types';
 
 type Props = {
   url: string;
-  preferences: Preferences;
 }
 
-const ParseContainer = ({ url, preferences }: Props) => {
+const ParseContainer = ({ url }: Props) => {
   
+  const { preferences } = useContext<any>(PreferencesContext); 
+    
   const splittedUrl: any = splitURL(url);
   const parsedStringUrl = generateParsedStringUrl(splittedUrl, preferences);
   
