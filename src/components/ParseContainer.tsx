@@ -24,7 +24,7 @@ const ParseContainer = ({ url }: Props) => {
         disabled
       />
 
-      <CopyToClipboard text={''} />
+      <CopyToClipboard text={parsedStringUrl} />
 
     </div>
   )
