@@ -2,7 +2,10 @@ import { Preferences, SplittedUrl } from "../types";
 
 const splitURL = (urlEncoded: string) => {
     const url = decodeURI(urlEncoded);
-    const [BASE_URL, RESOURCE] = url.split(/(?<!\/)\/(?!\/)/g) || null;
+    const singleSlashSplitter = url.split(/(?<!\/)\/(?!\/)/);    
+    const BASE_URL = singleSlashSplitter.shift() || '';
+    const RESOURCE = singleSlashSplitter.join('/');
+    //const [BASE_URL, RESOURCE] = url.split(/(?<!\/)\/(?!\/)/) || null;        
     const [SCHEME, HOSTNAME] = BASE_URL.split('//') || null;
     const [SUBDOMAIN, DOMAIN, TLD] = (HOSTNAME || '').split('.');
     const [PATH, QUERY] = (RESOURCE || '').split('?') || null;    
@@ -20,7 +23,7 @@ const splitURL = (urlEncoded: string) => {
         "scheme": SCHEME,
         "hostname": HOSTNAME,
         "subdomain": SUBDOMAIN,
-        "domain": `${DOMAIN ? `${DOMAIN}'.'${TLD}` : ''}`,
+        "domain": `${DOMAIN ? `${DOMAIN}.${TLD}` : ''}`,
         "tld": TLD,
         "path": PATH,
         "query": QUERY,

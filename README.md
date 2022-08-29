@@ -17,7 +17,8 @@ v0.1.0
 - Preferences is stored in local storage
 
 v0.1.1
-- Fix issue with URLs not being decoded
+- Fixed issue with URLs not being decoded
+- Fixed issue with not getting full resource if more than one single slash in the string
 ```
 
 # Getting started
@@ -42,7 +43,7 @@ Then run npm install to install dependencies
 npm install
 ```
 
-## Executing program
+## Usage
 
 ```
 npm start
