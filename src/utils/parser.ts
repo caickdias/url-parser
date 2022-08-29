@@ -1,6 +1,7 @@
 import { Preferences, SplittedUrl } from "../types";
 
-const splitURL = (url: string) => {
+const splitURL = (urlEncoded: string) => {
+    const url = decodeURI(urlEncoded);
     const [BASE_URL, RESOURCE] = url.split(/(?<!\/)\/(?!\/)/g) || null;
     const [SCHEME, HOSTNAME] = BASE_URL.split('//') || null;
     const [SUBDOMAIN, DOMAIN, TLD] = (HOSTNAME || '').split('.');

@@ -15,6 +15,9 @@ v0.1.0
 - Copy to clipboard
 - Preferences to show/hide information
 - Preferences is stored in local storage
+
+v0.1.1
+- Fix issue with URLs not being decoded
 ```
 
 # Getting started
